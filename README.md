@@ -1,4 +1,4 @@
-# Muniyaraj Application
+# Muniyaraj Angular2 Application
 
 How to setup the application
 
