@@ -1,5 +1,8 @@
-# angular2-registration-login-example
+# Muniyaraj Application
 
-Angular 2/5 User Registration and Login Example & Tutorial
+How to setup the application
 
-To see a demo and further details go to http://jasonwatmore.com/post/2016/09/29/angular-2-user-registration-and-login-example-tutorial
+
+1) Download the zip file
+2) Use npm install to install all dependencies
+3) npm start to run the project
