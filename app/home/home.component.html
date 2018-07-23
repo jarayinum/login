@@ -1,8 +1,7 @@
 ﻿<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container">
         <a class="navbar-brand" href="#">Dashboard</a>
-
-        <a class="navbar-brand" href="#">Login Time:</a>
+        <a class="navbar-brand" href="#">Login Time: {{today | date:'h:mm a z'}}</a>
     </div>
 </nav>
 
@@ -10,35 +9,36 @@
     <div class="jumbotron">
             <div class="container">
                 <div class="col-sm-8 col-sm-offset-2">
-
+ 
                     
 <div class="col-md-8 col-sm-offset-3">
-   
+   <br>
     <h3>Hi {{currentUser.firstName}}!</h3>
+    <br>
     <p>Welcome to our application</p>
+    <p>Your password is - <a  class="btn btn-success"> {{currentUser.password}}</a></p>
 
-    <p>Your Password :  {{currentUser.password}}!</p>
-
+    <br>
     <div class="card" style="width: 28rem;">
             <div class="card-body">
               <h5 class="card-title">All registered users:</h5>
-              <ul>
+              <ol>
                     <li *ngFor="let user of users">
-                        Username: {{user.username}} (Password: {{user.password}})
-                        <a (click)="deleteUser(user.id)">Delete</a>
+                        Username: {{user.username}} <br>
+                        Password: {{user.password}}
+                       - <a (click)="deleteUser(user.id)" class="btn btn-warning"> Delete</a>
                     </li>
-                </ul>
+                </ol>
             </div>
           </div>
-
-    <p><a [routerLink]="['/login']">Logout</a></p>
+<p style="padding-top: 20px;"><a [routerLink]="['/login']">Logout</a></p>
+<p>Today Date is {{today | date}}</p>
 </div>
 
 
 <div>
-        <p>Today is {{today | date}}</p>
-        <p>Or if you prefer, {{today | date:'fullDate'}}</p>
-        <p>The time is {{today | date:'h:mm a z'}}</p>
+        
+       
       </div>
 
       
